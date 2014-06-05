@@ -10,5 +10,5 @@ CabForward - Austin's Leading iOS and Swift Shop - <a href="http://cabforward.co
 
 StringUtils
 -------
-* convertToCamelCase()  ->  Converts a String like "my_database_table" to "MyDatabaseTable"
-* convertToUnderscoreCase()  -> Converts a String like "MyClassName" to "my_class_name"
+* convertToCamelCase()  ->  "my_database_table".convertToCamelCase() ==> "MyDatabaseTable"
+* convertToUnderscoreCase()  -> "MyClassName".convertToUnderscoreCase() ==> "my_class_name"
