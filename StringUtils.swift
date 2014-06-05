@@ -8,6 +8,53 @@
 
 extension String
 {
+    func length() -> Int
+    {
+        return countElements(self)
+    }
+    
+    func indexOf(searchChar: Character) -> Int?
+    {
+        var i = 0
+        for letter in self
+        {
+            if letter == searchChar
+            {
+                return i
+            }
+            i++
+        }
+        return nil
+    }
+    
+    func substring(from: Int, length: Int) -> String
+    {
+        let intermediate = self.substringFromIndex(from)
+        return intermediate.substringToIndex(length)
+    }
+    
+    func replace(replaceText: String, replaceWith: String) -> String
+    {
+        var s = ""
+        var i = 0
+        let len = replaceText.length()
+        while (i < self.length())
+        {
+            if (self.substring(i, length: len) == replaceText)
+            {
+                s += replaceWith
+                i += replaceText.length()
+            }
+            else
+            {
+                s += self.substring(i, length: 1)
+                i++
+            }
+        }
+        
+        return s
+    }
+    
     func convertToCamelCase() -> String
     {
         var s = ""
