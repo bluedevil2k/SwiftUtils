@@ -40,6 +40,11 @@ extension String
         let len = replaceText.length()
         while (i < self.length())
         {
+            if i + len > self.length() {
+                s += self.substring(i, length: self.length() - i)
+                break
+            }
+            
             if (self.substring(i, length: len) == replaceText)
             {
                 s += replaceWith
